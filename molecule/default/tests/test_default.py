@@ -7,7 +7,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_directory(host):
-    d = host.file('/opt/omero')
+    d = host.file('/opt/omero/nested/folders')
     assert d.is_directory
     assert d.user == 'root'
     assert d.group == 'root'

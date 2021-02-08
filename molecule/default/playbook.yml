@@ -3,6 +3,8 @@
   hosts: all
   roles:
     - role: ansible-role-omero-common
+      vars:
+        omero_common_basedir: /opt/omero/nested/folders
 
   tasks:
 
